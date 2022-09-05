@@ -1,0 +1,193 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 120px;
+    height: 48px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+}
+
+
+#initialMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+}
+
+#playButton {
+    width: 317px;
+    height: 114px;
+    background: #0A3871;
+    border: none;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#addButton {
+    width: 280px;
+    height: 67px;
+    background: transparent;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+
+#newWordMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 688px;
+    height: 512px;
+}
+
+#newWord,
+#newWord::placeholder {
+    width: 299px;
+    height: 48px;
+    border: none;
+    outline: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+.container-alert-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.alert {
+    width: 115px;
+    height: 18px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+}
+
+.alert>p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+}
+
+.buttons {
+    width: 332px;
+    height: 67px;
+    border: none;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button-blue {
+    background: #0A3871;
+    color: #FFFFFF;
+}
+
+.button-white {
+    background: transparent;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+#gameMenu {
+    margin-top: 148px;
+    margin-bottom: 71px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyboard {
+    height: 152px;
+    margin-top: 120px;
+    margin-bottom: 106px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+}
+
+#word {
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.letters {
+    width: 80px;
+    border: none;
+    outline: none;
+    border-bottom: #0A3871 4px solid;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 150%;
+    text-align: center;
+    color: #0A3871;
+    padding-bottom: 16px;
+}
+
+.letters:disabled {
+    background: transparent;
+}
