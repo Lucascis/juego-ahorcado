@@ -1,4 +1,4 @@
-let words = ["JAVASCRIPT", "PYTHON", "SWIFT", "JAVA", "DESARROLLO", "SERVIDOR"];
+let words = ["PROGRAMA", "PYTHON", "SWIFT", "JAVA", "JUEGO", "SERVIDOR", "AHORCADO"];
 
 function initialMenu() {
     console.log(words);

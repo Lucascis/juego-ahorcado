@@ -66,8 +66,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 240px;
+    margin-bottom: 40px;
     width: 688px;
-    height: 512px;
+    height: 744px;
 }
 
 #newWord,
@@ -212,4 +214,69 @@ main {
     line-height: 150%;
     text-align: center;
     color: #495057;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        top: 76px;
+        left: 0;
+    }
+
+    #newWordMenu,
+    #gameMenu {
+        height: 744px;
+    }
+
+    .keyboard {
+        margin-top: 56px;
+    }
+
+    #word {
+        gap: 16px;
+    }
+
+    .letters {
+        width: 64px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .logo {
+        top: 16px;
+        left: 0;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+    }
+
+    #newWordMenu {
+        width: 374px;
+        height: 491px;
+        margin-top: 152px;
+        align-items: center;
+    }
+
+    #newWord,
+    #newWord::placeholder {
+        height: 48px;
+    }
+
+    #gameMenu {
+        margin-bottom: 16px;
+    }
+
+    .keyboard {
+        margin-top: 40px;
+        margin-bottom: 56px;
+    }
+
+    #word {
+        gap: 8px;
+    }
+    
+    .letters {
+        width: 30px;
+        font-size: 24px;
+    }
 }
