@@ -171,6 +171,13 @@ main {
     justify-content: center;
     align-items: center;
     gap: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 150%;
+    text-align: center;
+    color: #0A3871;
 }
 
 .letters {
@@ -186,8 +193,23 @@ main {
     text-align: center;
     color: #0A3871;
     padding-bottom: 16px;
+    text-transform: uppercase;
 }
 
 .letters:disabled {
     background: transparent;
+}
+
+#hangman {
+    display: none;
+}
+
+#wrong-letters {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
 }
