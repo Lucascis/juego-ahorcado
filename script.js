@@ -9,6 +9,7 @@ function initialMenu() {
 
 function newWordMenu() {
     document.getElementById("newWord").value = "";
+    document.getElementsByClassName("alert")[0].style.display = "none";
     document.getElementById("initialMenu").style.display = "none";
     document.getElementById("newWordMenu").style.display = "flex";
     document.getElementById("gameMenu").style.display = "none";
@@ -69,7 +70,6 @@ function reset() {
 
 }
 
-
 //function to start the game
 let word = "";
 function startGame() {
@@ -110,6 +110,12 @@ function checkWrongLetters(letter) {
         document.getElementById("word").innerHTML = `La palabra era: ${word}`;
         document.getElementById("wrong-letter").innerHTML = "PERDISTE";
     }
+}
+
+//function listener keydown android devices
+function keydownListener(e) {
+    let letter = e.key.toUpperCase();
+    checkLetter(letter);
 }
 
 //input only letters
