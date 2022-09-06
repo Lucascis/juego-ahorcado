@@ -114,7 +114,7 @@ function checkWrongLetters(letter) {
 
 //input only letters
 function onlyLetters(e) {
-    let key = e.keyCode || e.which;
+    let key = e.which;
     let letter = String.fromCharCode(key).toUpperCase();
     let regex = /^[A-Z]$/;
     if (!regex.test(letter)) {
@@ -135,7 +135,7 @@ function eventsListener() {
     document.getElementById("playButton").addEventListener("click", gameMenu);
 
     //game menu
-    document.getElementById("word").addEventListener("keypress", onlyLetters);
+    document.getElementById("word").addEventListener("keydown", onlyLetters);
     document.getElementById("quitButton").addEventListener("click", initialMenu);
     document.getElementById("startAgainButton").addEventListener("click", gameMenu);
 }

@@ -1,11 +1,16 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.logo {
+.logo svg {
     position: absolute;
     top: 40px;
     left: 40px;
@@ -21,13 +26,18 @@ main {
     gap: 38px;
 }
 
+#initialMenu,
+#newWordMenu,
+#gameMenu {
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
 #initialMenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 38px;
+    justify-content: center;
 }
 
 #playButton {
@@ -61,15 +71,10 @@ main {
     cursor: pointer;
 }
 
-
 #newWordMenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 240px;
-    margin-bottom: 40px;
+    padding-top: 180px;
+    padding-bottom: 16px;
     width: 688px;
-    height: 744px;
 }
 
 #newWord,
@@ -147,18 +152,14 @@ main {
 }
 
 #gameMenu {
-    margin-top: 148px;
-    margin-bottom: 71px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 140px;
+    padding-bottom: 16px;
 }
 
 .keyboard {
     height: 152px;
-    margin-top: 120px;
-    margin-bottom: 106px;
+    padding-top: 120px;
+    padding-bottom: 106px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,10 +203,6 @@ main {
     background: transparent;
 }
 
-#hangman {
-    display: none;
-}
-
 #wrong-letters {
     font-family: 'Inter';
     font-style: normal;
@@ -216,19 +213,23 @@ main {
     color: #495057;
 }
 
-@media screen and (max-width: 768px) {
-    .logo {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .logo svg{
         top: 76px;
         left: 0;
     }
 
-    #newWordMenu,
-    #gameMenu {
-        height: 744px;
+    #newWordMenu {
+        margin: 0;
+        padding-bottom: 20px;
+        padding-top: 160px;
     }
 
-    .keyboard {
-        margin-top: 56px;
+    #gameMenu {
+        margin: 0;
+        padding-bottom: 16px;
+        padding-top: 80px;
+        align-items: center;
     }
 
     #word {
@@ -240,20 +241,23 @@ main {
     }
 }
 
-@media screen and (max-width: 375px) {
-    .logo {
+@media screen and (min-width: 300px) and (max-width: 767px) {
+
+    .logo svg {
         top: 16px;
         left: 0;
     }
 
     .buttons-container {
         flex-direction: column;
+        gap: 8px;
     }
 
     #newWordMenu {
         width: 374px;
-        height: 491px;
-        margin-top: 152px;
+        margin: 0;
+        padding-bottom: 20px;
+        padding-top: 80px;
         align-items: center;
     }
 
@@ -263,18 +267,22 @@ main {
     }
 
     #gameMenu {
-        margin-bottom: 16px;
+        width: 374px;
+        margin: 0;
+        padding-bottom: 16px;
+        padding-top: 80px;
+        align-items: center;
     }
 
     .keyboard {
-        margin-top: 40px;
-        margin-bottom: 56px;
+        padding-top: 40px;
+        padding-bottom: 56px;
     }
 
     #word {
         gap: 8px;
     }
-    
+
     .letters {
         width: 30px;
         font-size: 24px;
