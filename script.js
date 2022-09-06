@@ -25,8 +25,10 @@ function validateWord() {
     let regex = /^[a-zA-Z]{1,8}$/;
     if (regex.test(newWord)) {
         agregarPalabra(newWord);
+        return false;
     } else {
         document.getElementsByClassName("alert")[0].style.display = "flex";
+        return true;
     }
 }
 
@@ -129,7 +131,7 @@ function eventsListener() {
     document.getElementById("cancelButton").addEventListener("click", initialMenu);
 
     //new word menu
-    document.getElementById("saveButton").addEventListener("click", () => { initialMenu(); validateWord(); });
+    document.getElementById("saveButton").addEventListener("click", () => { if (!validateWord()) { initialMenu(); } });
     document.getElementById("playButton").addEventListener("click", gameMenu);
 
     //game menu
